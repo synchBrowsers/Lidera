@@ -8,6 +8,7 @@ const styles = require('./tasks/styles');
 const server = require('./tasks/server');
 const watch = require('./tasks/watch');
 const fonts = require('./tasks/fonts');
+const ghpages = require('./tasks/ghpages');
 
 gulp.task('scripts', scripts(false));
 gulp.task('scripts:watch', scripts(true));
@@ -20,6 +21,7 @@ gulp.task('templates', templates);
 gulp.task('server', server);
 gulp.task('watch', watch);
 gulp.task('fonts', fonts);
+gulp.task('ghpages', ghpages);
 
 gulp.task('build', gulp.series('clean', 
 	gulp.parallel('styles', 'lint', 'fonts', 'scripts', 'images', 'icons', 'templates'))
@@ -28,3 +30,5 @@ gulp.task('build', gulp.series('clean',
 gulp.task('default', gulp.series('build', 
 	gulp.parallel('watch','scripts:watch', 'server'))
 );
+
+gulp.task('deploy', gulp.series('build', 'ghpages'));

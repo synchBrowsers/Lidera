@@ -69,4 +69,28 @@
 		src: $src;
 	}
 }
+
+@mixin mobile {
+	@media (max-width: $mobile) {
+		@content;
+	}
+}
+
+@mixin portrait {
+	@media (max-width: $portrait) {
+		@content;
+	}
+}
+
+@mixin landscape {
+	@media (max-width: $landscape) {
+		@content;
+	}
+}
+
+@mixin desktop {
+	@media (max-width: $desktop) {
+		@content;
+	}
+}
 // stylelint-enable
