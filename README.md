@@ -4,8 +4,3 @@ HTML - PUG с плагином BEMTO
 JS собирается через webpack (ESlint)  
   
 Запуск - npm run start
-
----
-
-##### TODO:
-- [ ] налячкать адаптивную сетку
