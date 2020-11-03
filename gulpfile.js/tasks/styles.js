@@ -5,7 +5,6 @@ const cssnano = require('gulp-cssnano');
 const concat = require('gulp-concat');
 const rename = require('gulp-rename');
 const sourcemaps = require('gulp-sourcemaps');
-const stylelint = require('stylelint');
 
 exports.build = () => (
 	gulp.src('app/**/*.scss')
@@ -19,14 +18,4 @@ exports.build = () => (
 		.pipe(sourcemaps.write())
 		.pipe(rename({ suffix: '.min' }))
 		.pipe(gulp.dest('build/styles'))
-);
-
-exports.lint = () => (
-	gulp.src('app/**/*.scss')
-		.pipe(postcss([
-			stylelint(),
-			require('postcss-reporter')({
-				clearAllMessages: true,
-			}),
-		], { syntax: require('postcss-scss') }))
 );

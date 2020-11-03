@@ -13,7 +13,6 @@ const ghpages = require('./tasks/ghpages');
 gulp.task('scripts', scripts(false));
 gulp.task('scripts:watch', scripts(true));
 gulp.task('styles', styles.build);
-gulp.task('lint', styles.lint);
 gulp.task('clean', clean);
 gulp.task('images', images);
 gulp.task('icons', icons);
@@ -24,7 +23,7 @@ gulp.task('fonts', fonts);
 gulp.task('ghpages', ghpages);
 
 gulp.task('build', gulp.series('clean', 
-	gulp.parallel('styles', 'lint', 'fonts', 'scripts', 'images', 'icons', 'templates'))
+	gulp.parallel('styles', 'fonts', 'scripts', 'images', 'icons', 'templates'))
 );
 
 gulp.task('default', gulp.series('build', 
