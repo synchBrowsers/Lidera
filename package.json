@@ -41,7 +41,6 @@
 		"gulp-if": "^3.0.0",
 		"gulp-imagemin": "^7.1.0",
 		"gulp-jsbeautifier": "^3.0.1",
-		"gulp-nano": "^1.0.7",
 		"gulp-plumber": "^1.2.1",
 		"gulp-plumber-error-handler": "^1.0.0",
 		"gulp-postcss": "^9.0.0",
