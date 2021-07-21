@@ -13,6 +13,7 @@ module.exports = (watch = false) => {
 			const jsonStats = stats.toJson();
 			if (jsonStats.errors.length) {
 				jsonStats.errors.forEach((message) => {
+					console.log(message);
 				scriptsErrorHandler.call({ emit() { /* noop */ } }, { message });
 			});
 			}

@@ -9,12 +9,8 @@
 		"deploy": "gulp ghpages"
 	},
 	"dependencies": {
-		"@babel/cli": "^7.14.8",
 		"@babel/core": "^7.14.8",
-		"@babel/node": "^7.14.7",
-		"@babel/plugin-transform-runtime": "^7.14.5",
 		"@babel/preset-env": "^7.14.8",
-		"@babel/runtime": "^7.14.8",
 		"acorn": "^8.4.1",
 		"babel-eslint": "^10.0.3",
 		"babel-loader": "^8.2.2",
@@ -58,6 +54,7 @@
 		"postcss-import": "^14.0.2",
 		"postcss-loader": "^6.1.1",
 		"postcss-reporter": "^7.0.2",
+		"sass": "^1.35.2",
 		"stylelint": "^13.13.1",
 		"stylelint-config-standard": "^22.0.0",
 		"svg4everybody": "^2.1.9",
