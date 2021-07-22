@@ -71,6 +71,7 @@
         border: none;
         text-align: center;
         background: url('../images/input.png');
+        padding: 0 20px;
 
         &:focus + .contacts__placeholder,
         &:valid + .contacts__placeholder {
