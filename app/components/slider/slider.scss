@@ -1,0 +1,78 @@
+@import '../../styles/helpers/_variables.scss';
+@import '../../styles/helpers/_mixins.scss';
+
+.gallery {
+    background: $darkGrey;
+    padding: 250px 0 140px 0;
+    position: relative;
+
+    &:after {
+        content: '';
+        position: absolute;
+        width: 761px;
+        height: 1249px;
+        background: url('../images/slider-graffiti.png');
+        top: 120px;
+        right: 77px;
+        opacity: .1;
+        z-index: 1;
+    }
+
+    &__slider.swiper-container {
+        padding-bottom: 125px;
+        margin-bottom: 135px;
+        z-index: 10;
+    }
+
+    .container {
+        text-align: right;
+    }
+
+    .heading {
+        margin-bottom: 180px;
+        z-index: 2;
+    }
+
+    .swiper-slide {
+        width: 1000px;
+    }
+
+    .swiper-pagination {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet {
+        margin: 0 10px;
+    }
+
+    .swiper-pagination-bullet {
+        background: transparent;
+        width: 14px;
+        height: 14px;
+        border: 3px solid $gold;
+        opacity: 1;
+        @include transition(.15s ease-in-out);
+
+        &-active {
+            width: 14px;
+            border: 1px solid $darkGrey;
+            height: 14px;
+            background: $gold;
+        }
+    }
+
+    .wave {
+
+        &.top {
+            top: -1px;
+            transform: scale(1, -1)
+        }
+        
+        &.bottom {
+            bottom: 0;
+            transform: scale(1, 1)
+        }
+    }
+}

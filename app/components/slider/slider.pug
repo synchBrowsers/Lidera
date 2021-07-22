@@ -1,0 +1,20 @@
+include ../heading/heading
+include ../wave/wave
+
+mixin slider()
+    +b.SECTION.gallery 
+        +wave().top
+        .container 
+            +heading('Фотогалерея.', 'background')
+        +e.slider.swiper-container
+            .swiper-wrapper
+                +e.slide.swiper-slide
+                    img(src="https://via.placeholder.com/1000x625", alt="")
+                +e.slide.swiper-slide
+                    img(src="https://via.placeholder.com/1000x625", alt="")
+                +e.slide.swiper-slide
+                    img(src="https://via.placeholder.com/1000x625", alt="")
+                +e.slide.swiper-slide
+                    img(src="https://via.placeholder.com/1000x625", alt="")
+            .swiper-pagination
+        +wave().bottom

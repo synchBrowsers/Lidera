@@ -1,0 +1,7 @@
+mixin heading(text, background)
+    if background
+        +b.text
+            +b.H2.heading.background= text
+    else 
+        +b.H2.heading= text
+        

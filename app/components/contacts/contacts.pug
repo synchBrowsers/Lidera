@@ -1,0 +1,17 @@
+include ../heading/heading
+
+mixin contacts()
+    +b.SECTION.contacts 
+        .container 
+            +heading('Хочешь с нами?', 'background')
+            +e.subheading Заполняй форму! Свяжемся в ближайшее время или добавим в резерв. 
+            +e.FORM.form 
+                +e.form-wrap
+                    +e.INPUT.input(required, type="text")
+                    +e.LABEL.placeholder Имя
+                +e.form-wrap
+                    +e.INPUT.input(required, type="text")
+                    +e.LABEL.placeholder E-mail
+                +e.form-wrap
+                    +e.INPUT.input(required, type="phone")
+                    +e.LABEL.placeholder Телефон

@@ -1,4 +1,18 @@
 extends ../../layouts/head
 
+include ../../components/main/main
+include ../../components/about/about
+include ../../components/work/work
+include ../../components/result/result
+include ../../components/slider/slider
+include ../../components/contacts/contacts
+include ../../components/footer/footer
+
 block content
-    | It's working!
+    +main()
+    +about()
+    +work()
+    +result()
+    +slider()
+    +contacts()
+    +footer()

@@ -1,0 +1,53 @@
+@import '../../styles/helpers/_variables.scss';
+@import '../../styles/helpers/_mixins.scss';
+
+.result {
+    height: 1280px;
+    position: relative;
+    z-index: 6;
+    padding-top: 80px;
+
+    &:before {
+        content: '';
+        position: absolute;
+        top: -450px;
+        left: 0;
+        width: 1253px;
+        height: 1504px;
+        background: url('../images/result-graffiti.png');
+        opacity: .1;
+        pointer-events: none;
+    }
+
+    .container {
+        display: flex;
+        text-align: right;
+        align-items: flex-end;
+
+        &:last-child {
+            align-items: flex-start;
+            padding-left: 60px;
+        }
+    }
+
+    &__subheading {
+        font-size: 49px;
+        margin-top: 70px;
+        font-weight: 700;
+    }
+
+    .text {
+        background-size: cover;
+        background-position: center;
+    }
+
+    .heading {
+        max-width: 660px;
+        margin-bottom: 30px;
+    }
+
+    &__car {
+        margin-top: 100px;
+        display: block;
+    }
+}

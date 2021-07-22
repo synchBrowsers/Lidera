@@ -1,0 +1,40 @@
+@import '../../styles/helpers/_variables.scss';
+@import '../../styles/helpers/_mixins.scss';
+
+.main {
+    background: $darkGrey;
+    min-height: 1230px;
+    position: relative;
+    overflow: hidden;
+
+    &__logo {
+        max-width: 1105px;
+        margin-top: 212px;
+        z-index: 3;
+    }
+
+    &:before {
+        content: '';
+        position: absolute;
+        width: 760px;
+        height: 961px;
+        background: url('../images/main-man.png');
+        right: 0;
+        bottom: -3px;
+        z-index: 2;
+    }
+    &:after {
+        content: '';
+        position: absolute;
+        width: 1392px;
+        height: 1155px;
+        background: url('../images/main-graffiti.png') no-repeat;
+        right: 0;
+        bottom: -3px;
+        z-index: 1;
+    }
+
+    .wave {
+        bottom: 0;
+    }
+}

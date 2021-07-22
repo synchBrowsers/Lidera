@@ -1,0 +1,36 @@
+@import '../../styles/helpers/_variables.scss';
+@import '../../styles/helpers/_mixins.scss';
+
+.work {
+    background: $darkGrey;
+    color: $white;
+    padding-top: 140px;
+    height: 990px;
+    position: relative;
+    
+    &:before {
+        content: '';
+        position: absolute;
+        background: url('../images/work-man.png');
+        background-size: cover;
+        width: 1044px;
+        height: 1151px;
+        bottom: 0;
+        right: 0;
+    }
+
+    p {
+        line-height: 37px;
+    }
+
+    .heading {
+        max-width: 870px;
+        font-size: 94px;
+        margin-bottom: 50px;
+    }
+
+    .wave {
+        bottom: 0;
+        transform: scale(-1, 1);
+    }
+}

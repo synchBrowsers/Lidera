@@ -1,0 +1,18 @@
+@import '../../styles/helpers/_variables.scss';
+@import '../../styles/helpers/_mixins.scss';
+
+.text {
+    background: url('../images/text-bg.jpg');
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.heading {
+    font-size: 100px;
+    font-weight: 700;
+    color: $darkGrey;
+
+    &.background {
+        color: $gold;
+    }
+}

@@ -2,9 +2,18 @@
 @import 'helpers/_mixins.scss';
 @import 'helpers/_reset.scss';
 @import 'helpers/_animate.scss';
+@import 'helpers/_fonts.scss';
 
 body {
-	font-family: 'Roboto', sans-serif;
+	font-family: 'Montserrat', sans-serif;
 	color: $black;
 	overflow-x: hidden;
+}
+
+.container {
+	max-width: 1400px;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+	padding: 0 15px;
 }
