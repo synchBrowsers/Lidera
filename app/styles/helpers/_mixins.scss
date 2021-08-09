@@ -93,4 +93,10 @@
 		@content;
 	}
 }
+
+@mixin notebook {
+	@media (max-width: $notebook) {
+		@content;
+	}
+}
 // stylelint-enable

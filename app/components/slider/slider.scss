@@ -6,6 +6,14 @@
     padding: 250px 0 140px 0;
     position: relative;
 
+    @include notebook {
+        padding: 100px 0 1px 0;
+    }
+
+    @include mobile {
+        padding-top: 50px;
+    }
+
     &:after {
         content: '';
         position: absolute;
@@ -16,12 +24,29 @@
         right: 77px;
         opacity: .1;
         z-index: 1;
+
+        @include notebook {
+            transform: scale(.7);
+            right: -114px;
+        }
+
+        @include portrait {
+            display: none;
+        }
     }
 
     &__slider.swiper-container {
         padding-bottom: 125px;
         margin-bottom: 135px;
         z-index: 10;
+
+        @include portrait {
+            padding-bottom: 60px;
+        }
+        
+        @include mobile {
+            margin-bottom: 50px;
+        }
     }
 
     .container {
@@ -31,6 +56,14 @@
     .heading {
         margin-bottom: 180px;
         z-index: 2;
+
+        @include portrait {
+            margin-bottom: 100px;
+        }
+
+        @include mobile {
+            margin-bottom: 50px;
+        }
     }
 
     .swiper-slide {
@@ -67,7 +100,11 @@
 
         &.top {
             top: -1px;
-            transform: scale(1, -1)
+            transform: scale(1, -1);
+
+            @include portrait {
+                display: none;
+            }
         }
         
         &.bottom {

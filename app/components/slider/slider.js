@@ -4,14 +4,20 @@ Swiper.use([Navigation, Pagination]);
 /* eslint-disable */
 const slider = () => {
 	const sliderElement = new Swiper('.gallery__slider', {
-        spaceBetween: 45,
-        slidesPerView: 'auto',
-        centeredSlides: true,
+        slidesPerView: 1,
+        spaceBetween: 10,
         loop: true,
         pagination: {
             el: '.swiper-pagination',
             clickable: true,
         },
+        breakpoints: {
+            767: {
+                spaceBetween: 45,
+                slidesPerView: 'auto',
+                centeredSlides: true,
+            }
+        }
 	});
 };
 export default slider;

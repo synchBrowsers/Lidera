@@ -7,10 +7,45 @@
     position: relative;
     overflow: hidden;
 
+    @include portrait {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    @include desktop {
+        min-height: 650px;
+    }
+
+    @include portrait {
+        min-height: 100%;
+    }
+
     &__logo {
         max-width: 1105px;
         margin-top: 212px;
         z-index: 3;
+        width: 70%;
+
+        @include notebook {
+            width: 70%;
+        }
+
+        @include desktop {
+            width: 60%;
+            margin-top: 100px;
+        }
+
+        @include portrait {
+            width: 100%;
+            margin: 0 auto;
+            margin-top: 100px;
+            margin-bottom: 80px;
+        }
+
+        @include mobile {
+            margin-top: 50px;
+            margin-bottom: 50px;
+        }
     }
 
     &:before {
@@ -22,7 +57,39 @@
         right: 0;
         bottom: -3px;
         z-index: 2;
+        pointer-events: none;
+
+        @include notebook {
+            transform: scale(.8);
+            right: -76px;
+            bottom: -110px;
+        }
+
+        @include desktop {
+            transform: scale(.6);
+            right: -152px;
+            bottom: -195px;
+        }
+
+        @include landscape {
+            bottom: -215px;
+        }
+
+        @include portrait {
+            display: none;
+        }
     }
+
+    &__man {
+        display: none;
+        margin: 0 auto;
+        z-index: 2;
+
+        @include portrait {
+            display: block;
+        }
+    }
+
     &:after {
         content: '';
         position: absolute;

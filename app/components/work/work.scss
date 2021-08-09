@@ -7,6 +7,15 @@
     padding-top: 140px;
     height: 990px;
     position: relative;
+
+    @include desktop {
+        padding-top: 60px;
+        height: 760px;
+    }
+
+    @include portrait {
+        height: auto;
+    }
     
     &:before {
         content: '';
@@ -17,20 +26,73 @@
         height: 1151px;
         bottom: 0;
         right: 0;
+
+        @include notebook {
+            transform: scale(.6);
+            right: -209px;
+            bottom: -233px;
+        }
+
+        @include desktop {
+            transform: scale(.4);
+            right: -314px;
+            bottom: -346px;
+        }
+
+        @include portrait {
+            display: none;
+        }
     }
 
     p {
         line-height: 37px;
+
+        @include portrait {
+            text-align: center;
+        }
+
+        @include mobile {
+            font-size: 18px;
+            line-height: 1.4;
+        }
     }
 
     .heading {
         max-width: 870px;
         font-size: 94px;
         margin-bottom: 50px;
+
+        @include landscape {
+            font-size: 52px;
+        }
+
+        @include mobile {
+            font-size: 30px;
+            margin-bottom: 30px;
+        }
     }
 
     .wave {
         bottom: 0;
         transform: scale(-1, 1);
+
+        @include notebook {
+            bottom: -3px;
+        }
+
+        @include desktop {
+            bottom: -1px;
+        }
+    }
+
+    &__man {
+        display: none;
+        margin-top: 60px;
+
+        @include portrait {
+            display: block;
+            width: 102%;
+            margin-left: 1%;
+        }
     }
 }

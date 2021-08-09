@@ -12,6 +12,19 @@
     font-weight: 700;
     color: $darkGrey;
 
+    @include landscape {
+        font-size: 52px;
+    }
+
+    @include portrait {
+        font-size: 65px;
+        text-align: center;
+    }
+
+    @include mobile {
+        font-size: 30px;
+    }
+
     &.background {
         color: $gold;
     }

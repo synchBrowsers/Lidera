@@ -2,12 +2,36 @@
 @import '../../styles/helpers/_mixins.scss';
 
 .contacts {
-    padding: 170px 0 250px 0;
-    position: relative;
     height: 1230px;
+    position: relative;
+
+    @include desktop {
+        height: auto;
+    }
+
+    .container {
+        padding: 170px 15px 250px 15px;
+
+        @include desktop {
+            padding: 50px 15px;
+        }
+
+        @include portrait {
+            padding-bottom: 0;
+        }
+    }
 
     &__subheading {
         margin-top: 50px;
+
+        @include desktop {
+            margin-top: 20px;
+        }
+
+        @include portrait {
+            text-align: center;
+            font-size: 25px;
+        }
     }
 
     &:before {
@@ -20,6 +44,23 @@
         height: 1658px;
         z-index: 6;
         mix-blend-mode: multiply;
+
+        @include notebook {
+            transform: scale(.7);
+            left: -144px;
+            bottom: -249px;
+        }
+
+        @include desktop {
+            transform: scale(.4);
+            left: -290px;
+            padding-left: unset;
+            bottom: -497px;
+        }
+
+        @include portrait {
+            display: none;
+        }
     }
 
     &:after {
@@ -31,6 +72,28 @@
         bottom: 0;
         left: 0;
         z-index: 7;
+
+        @include notebook {
+            transform: scale(.8);
+            left: -98px;
+            bottom: -88px;
+        }
+
+        @include desktop {
+            transform: scale(.6);
+            left: -196px;
+            bottom: -175px;
+        }
+
+        @include landscape {
+            transform: scale(.5);
+            left: -246px;
+            bottom: -219px;
+        }
+
+        @include portrait {
+            display: none;
+        }
     }
 
     .text {
@@ -52,6 +115,24 @@
         position: relative;
         margin-right: -35px;
         padding: 60px;
+
+        @include desktop {
+            margin-top: 60px;
+            margin-right: 0;
+        }
+
+        @include landscape {
+            padding: 0;
+            display: flex;
+            align-items: flex-end;
+            flex-direction: column;
+        }
+
+        @include portrait {
+            align-items: center;
+            width: 100%;
+            height: auto;
+        }
     }
 
     &__form-wrap {
@@ -61,6 +142,13 @@
         align-items: center;
         justify-content: center;
         margin-bottom: 65px;
+
+        &:last-child {
+
+            @include portrait {
+                margin-bottom: 0;
+            }
+        }
     }
 
     &__input {
@@ -78,6 +166,16 @@
             opacity: 0;
         }
 
+        @include portrait {
+            width: 325px;
+            height: 74px;
+            background-size: cover;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+
     }
 
     &__placeholder {
@@ -85,9 +183,26 @@
         font-weight: 600;
         position: absolute;
         pointer-events: none;
-        background: url('../images/text-bg.jpg');
-        background-clip: text;
-        -webkit-text-fill-color: transparent;
+        color: $black;
         @include transition(.15s ease-in-out);
+
+        @include portrait {
+            font-size: 16px;
+        }
+    }
+
+    &__man {
+        font-size: 0;
+        margin-bottom: -3px;
+        display: none;
+        margin-top: -395px;
+
+        @include portrait {
+            display: block;
+        }
+
+        @include mobile {
+            margin-top: 0;
+        }
     }
 }

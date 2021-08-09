@@ -6,6 +6,14 @@
     background: $darkGrey;
     position: relative;
 
+    @include notebook {
+        padding: 100px 0;
+    }
+
+    @include portrait {
+        padding: 50px 0;
+    }
+
     &:before {
         position: absolute;
         content: '';
@@ -28,6 +36,11 @@
     &__icon {
         display: block;
         background-image: url('../images/social.png');
+        
+
+        @include portrait {
+            transform: scale(.5);
+        }
 
         &.twitter {
             background-position: 0 0;

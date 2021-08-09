@@ -7,6 +7,19 @@
     z-index: 6;
     padding-top: 80px;
 
+    @include desktop {
+        height: 1100px;
+        padding-top: 40px;
+    }
+
+    @include landscape {
+        height: 800px;
+    }
+
+    @include portrait {
+        height: auto;
+    }
+
     &:before {
         content: '';
         position: absolute;
@@ -17,6 +30,14 @@
         background: url('../images/result-graffiti.png');
         opacity: .1;
         pointer-events: none;
+
+        @include portrait {
+            transform: scale(.6);
+            top: -600px;
+            left: -530px;
+            width: 1253px;
+            height: 1504px;
+        }
     }
 
     .container {
@@ -27,6 +48,17 @@
         &:last-child {
             align-items: flex-start;
             padding-left: 60px;
+
+            @include landscape {
+                align-items: center;
+                padding-left: unset;
+            }
+        }
+
+        @include landscape {
+            text-align: center;
+            align-items: center;
+            font-size: 25px;
         }
     }
 
@@ -34,6 +66,15 @@
         font-size: 49px;
         margin-top: 70px;
         font-weight: 700;
+
+        @include landscape {
+            font-size: 40px;
+        }
+
+        @include landscape {
+            font-size: 26px;
+            margin-bottom: 45px;
+        }
     }
 
     .text {

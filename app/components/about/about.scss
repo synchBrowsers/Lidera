@@ -7,6 +7,26 @@
     padding-top: 40px;
     z-index: 6;
 
+    @include notebook {
+        height: 890px;
+    }
+
+    @include desktop {
+        height: 730px;
+    }
+
+    @include landscape {
+        height: 540px;
+    }
+
+    @include landscape {
+        height: 540px;
+    }
+
+    @include portrait {
+        height: auto;
+    }
+
     &:after {
         content: '';
         position: absolute;
@@ -15,6 +35,26 @@
         background: url('../images/about-face.png');
         left: 0;
         top: -605px;
+        pointer-events: none;
+
+        @include notebook {
+            transform: scale(.8);
+            left: -85px;
+        }
+
+        @include desktop {
+            transform: scale(.6);
+            left: -169px;
+        }
+
+        @include landscape {
+            transform: scale(.4);
+            left: -254px;
+        }
+
+        @include portrait {
+            display: none;
+        }
     }
 
     &:before {
@@ -26,9 +66,56 @@
         bottom: 0;
         left: 0;
         opacity: .1;
+
+        @include portrait {
+            display: none;
+        }
     }
 
     .container {
         text-align: right;
+
+        @include portrait {
+            text-align: center;
+        }
+    }
+
+    .heading {
+
+        @include portrait {
+            margin-bottom: 50px;
+        }
+
+        @include mobile {
+            margin-bottom: 30px;
+        }
+    }
+
+    &__text {
+
+        @include portrait {
+            margin: 0 auto;
+            font-size: 25px;
+            max-width: 450px;
+            margin-bottom: 25px;
+
+            b {
+                display: block;
+            }
+        }
+
+        @include mobile {
+            font-size: 18px;
+        }
+    }
+
+    &__face {
+        display: none;
+
+        @include portrait {
+            display: block;
+            position: relative;
+            bottom: -50px;
+        }
     }
 }
